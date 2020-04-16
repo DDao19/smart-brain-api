@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // ROUTES* put the functions in a seperate folder "controllers" for cleaner code
-app.get('/', (req, res) => { res.send(database.users) })
+app.get('/', (req, res) => { res.send("It is working!") })
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) })
